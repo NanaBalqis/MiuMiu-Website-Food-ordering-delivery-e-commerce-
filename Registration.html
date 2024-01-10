@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+ <html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Registration</title>
+    <link rel="icon" href="logodonut.png" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ </head>
+
+ <body>
+
+	<header class="header">
+		<div class="brand">
+            <a href="#" class="MiuMiu">Miu Miu.</a>
+            <img src="logodonut.png" alt="Logo" class="logo">
+        </div>
+	</header>
+
+    <div class="wrapper">
+        <form action="Registration.php" id="registrationForm" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+            <h1>Registration</h1>
+			
+			<div class="input-box">
+				<div class="input-field">
+					<input type="text" name="name" placeholder="Full Name" required>
+                    <i class='bx bxs-user'></i>
+				</div>
+				<div class="input-field">
+					<input type="text" id="username" name="cust_ID" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+				</div>
+                <div>
+                    <span id="usernameError" style="color: red;"></span>
+                  </div>
+			</div>
+			
+			<div class="input-box">
+				<div class="input-field">
+					<input type="email" name="email" placeholder="Email" required>
+                    <i class='bx bxs-envelope'></i>
+				</div>
+				<div class="input-field">
+					<input type="tel" name="phoneno" placeholder="Phone Number" required>
+                    <i class='bx bxs-phone'></i>
+				</div>
+			</div>
+			
+			<div class="input-box">
+				<div class="input-field">
+					<input type="password" id="Password" name="pass" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+				</div>
+				<div class="input-field">
+					<input type="password" id="ConfirmPassword" name="confirmpass" placeholder="Confirm Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+				</div>
+			</div>
+
+            <div class="input-box">
+				<div class="input-field">
+					<input type="address" name="address" placeholder="Address" required>
+                    <i class='bx bx-current-location'></i>
+				</div>
+				<div class="input-field">
+					<input type="city" name="city" placeholder="City" required>
+                    <i class='bx bx-current-location'></i>
+				</div>
+			</div>
+            <div class="input-box">
+				<div class="input-field">
+					<input type="zipCode" name="zipCode" placeholder="Zip Code" required>
+                    <i class='bx bx-current-location'></i>
+				</div>
+			</div>
+            <div id="passwordErrorContainer">
+                <span id="passwordError" style="color:red;"></span> 
+             </div>
+
+            <label><input type="checkbox" id="agreeCheckbox" >I hereby declare that the above information is true</label>
+                 <div id="agreeError">
+                    <span id="agreeCheckError" style="color: red;"></span>
+                </div>
+            <button type="submit" class="btn" id="submitButton" disabled>Register</button>
+		
+			<div class="back-to-login">
+				<p>If you already have an account. <a href="http://localhost/miumiu/sign%20in/signIn.php">Back To Login</a></p>
+			</div>
+			
+        </form>
+    </div>
+
+    <script>
+        //JavaScript check user input
+        document.addEventListener("DOMContentLoaded", function(){
+            const passwordField = document.getElementById("Password");
+            const confirmPasswordField = document.getElementById("ConfirmPassword");
+            const passwordError = document.getElementById("passwordError");
+            const agreeCheckbox = document.getElementById("agreeCheckbox");
+            const agreeCheckError = document.getElementById("agreeCheckError");
+            const submitButton = document.getElementById("submitButton");
+            const registrationForm = document.getElementById("registrationForm");
+            const usernameField = document.getElementById("username");
+            const usernameError = document.getElementById("usernameError");
+
+            function checkUsername() {
+                const usernameValue = usernameField.value;
+                if (usernameValue.includes(" ")) {
+                    usernameError.textContent = "Username cannot contain spaces!";
+                } else {
+                    usernameError.textContent = "";
+                }
+            }
+
+            function checkPassword() {
+                if (passwordField.value !== confirmPasswordField.value) {
+                passwordError.textContent = "Passwords do not match!";
+                } else {
+                passwordError.textContent = "";
+                }
+            }
+
+            function checkCheckbox() {
+                submitButton.disabled = !agreeCheckbox.checked;
+                if (!agreeCheckbox.checked) {
+                    agreeCheckError.textContent = "Please declare the checkbox!";
+                } else {
+                    agreeCheckError.textContent = "";  
+                }
+            }
+
+            function handleSubmit(event) {
+                if (!agreeCheckbox.checked) {
+                event.preventDefault(); // Prevent form submission if checkbox is not checked
+                agreeCheckError.textContent = "Please declare the checkbox!";
+                }
+            }
+
+      // Event listeners for input and change events
+      usernameField.addEventListener("input", checkUsername);
+      passwordField.addEventListener("input", checkPassword);
+      confirmPasswordField.addEventListener("input", checkPassword);
+      agreeCheckbox.addEventListener("change", checkCheckbox);
+
+      // Event listener for form submission
+      document.getElementById("registrationForm").addEventListener("submit", handleSubmit);
+    });
+  </script>
+ </body>
+ </html>
