@@ -1,4 +1,4 @@
-we build this project everything from scratch using PHP, SQL, HTML, CSS, JavaScript and Jquery language. This project such a challenging project for us as Diploma student, it is also take us 3 month to succesfully completed this project. We are so happy to give our best in this project, we manage to did 82% complete everything succesfull with Create, Update, Delete and Read function. i would love to mention and ThankYou all my partner in contributed in this project :-
+we build this project everything from scratch using PHP, SQL, HTML, CSS, JavaScript and Jquery language. This project such a challenging project for us as Diploma student, it is also take us 3 month to succesfully completed this project. We are so happy to give our best in this project, we manage to did 82% complete everything succesfull with Create, Update, Delete and Read function. i would love to mention and ThankYou all my partner that contributed in this project :-
 
 Nurainaa Balqis (Leader, Front-end and Back-end)
 Wan Fatihah (Back-end)
