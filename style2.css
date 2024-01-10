@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+	background: url('image/abstract\ light.jpg') no-repeat;
+	background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    padding: 20px 50px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }  
+
+  .brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand .MiuMiu{
+    font-size: 30px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.brand .logo {
+    width: 60px;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    background: white;
+	max-width: 800px;
+	min-height: 500px;
+	display: flex;
+    border-radius: 20px;
+	justify-content: center;
+    flex-direction: column;
+	align-items: center;
+    width: 400px;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 8px pink;
+}
+
+.container .title{
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.container form input{
+    display: none;
+}
+
+.container form .category{
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.category label{
+    width: 100%;
+    height: 65px;
+    padding: 20px;
+    box-shadow: 0 4px 8px pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+label:nth-child(2), label:nth-child(3){
+    margin: 15px 0;
+}
+
+#visa:checked ~ .category .visaMethod,
+#mastercard:checked ~ .category .mastercardMethod,
+#paypal:checked ~ .category .paypalMethod,
+#cod:checked ~ .category .codMethod{
+	box-shadow: 0px 0px 0px 1px #f83992;
+}
+
+#visa:checked ~ .category .visaMethod .check,
+#mastercard:checked ~ .category .mastercardMethod .check,
+#paypal:checked ~ .category .paypalMethod .check,
+#cod:checked ~ .category .codMethod .check{
+	display: block;
+}
+
+label .imgName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.imgName span{
+    margin-left: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.imgName .imgContainer{
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 50px;
+    height: auto;   
+}
+
+.visa img{
+    width: 70px;
+}
+
+.mastercard img{
+    width: 80px;
+}
+
+.paypal img{
+    width: 40px;
+}
+
+.cod img{
+    width: 40px;
+}
+
+.visaMethod {
+    margin-bottom: 20px; 
+    position: relative;
+}
+
+.mastercardMethod {
+    margin-top: 20px; 
+}
+
+
+.check{
+    display: none;
+}
+
+.check i{
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 770px){
+	.container{
+		flex-direction: column;
+	}
+	body{
+		overflow-y: auto;
+	}
+}

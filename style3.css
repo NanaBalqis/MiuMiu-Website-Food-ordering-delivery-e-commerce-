@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url('image/abstract\ light.jpg') no-repeat;
+    background-size: cover;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    padding: 20px 50px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }  
+
+  .brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand .MiuMiu{
+    font-size: 30px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.brand .logo {
+    width: 60px;
+    height: auto;
+}
+
+form{
+    width: 600px;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px pink;
+}
+
+.container{
+	background: white;
+	max-width: 800px;
+	min-height: 500px;
+	display: flex;
+    border-radius: 20px;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 0.5rem 1.5rem;
+    box-shadow: 0 4px 8px pink;
+}
+
+.left {
+    flex-basis: 50%;
+}
+
+.right {
+    flex-basis: 50%;
+}
+
+form {
+    padding: 1rem;
+}
+
+h3 {
+    margin-top: 1rem;
+    color: black;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.voucher-box input[type="text"] {
+    padding: 8px;
+    width: calc(100% - 20px); /* Adjust width to fit text aligned to the left */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    text-align: left; /* Align text to the left */
+}
+
+.voucher-section {
+    margin-bottom: 20px;
+}
+
+.voucher-box {
+    border: 5px solid #f83992; 
+    border-radius: 8px;
+    margin: 5px 50px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.voucher-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.voucher-box button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f83992;
+    color: white;
+    cursor: pointer;
+}
+
+.voucher-box button:hover {
+    background-color: #e5acc7;
+}
+
+#voucherMessage {
+    font-size: 14px; 
+}
+
+.voucher-message {
+    display: inline-block; 
+    vertical-align: top; 
+    margin-left: 50px; 
+}
+
+.payment-details {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.payment-details input[type="text"] {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-details input[type="button"] {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #f83992;
+    color: white;
+    cursor: pointer;
+}
+
+.payment-details input[type="button"]:hover {
+    background-color: #e5acc7;
+}
+
+form input[type="text"],
+input[type="text"]
+ {
+    width: 100%; 
+    padding: 0.5rem 0.7rem;
+    margin-right: 200px;
+    outline: none;
+    border: none; 
+    background: none; 
+    box-shadow: none; 
+    font-size: 16px; 
+    text-align: right; 
+    display: block; 
+    align-items: center;
+}
+
+input[type="button"]{
+    text-align: center;
+    display: block;
+    align-items: center;
+    border-radius: 20px;
+}
+
+input[type="button"]:hover {
+    background: #e5acc7;
+    border: 2px solid black;
+}
+
+.btn .PAY{
+    width: 100%;
+    padding: 0.7rem 1.5rem;
+    background: #f83992;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    align-items: center;
+    border-radius: 20px
+}
+
+.btn .EXIT{
+    width: 100%;
+    padding: 0.7rem 1.5rem;
+    background: #f83992;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    align-items: center;
+    border-radius: 20px
+}
+
+.popup{
+    width: 400px;
+    background:#f0a5c8;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px pink;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: black;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2{
+    font-size: 26px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: pink;
+    color: #fff;
+    outline: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 13px;
+    border-bottom: 1px solid #ccc;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.total-row td:first-child {
+    font-weight: bold;
+}
+
+form > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px; 
+    flex-wrap: nowrap; 
+}
+
+form > div label {
+    width: 150px; 
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+form > div .value {
+    flex: 1; 
+    text-align: right; 
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+input[type="button"]{
+	width: 100%;
+	padding: 0.7rem 1.5rem;
+	background: #f83992;
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+input[type="button"]:hover{
+	background: #f83992;
+}
+
+@media only screen and (max-width: 770px){
+    .container{
+        flex-direction: column;
+    }
+    body{
+        overflow-y: auto;
+    }
+    form {
+        width: 100%; /* Adjust form width for smaller screens */
+    }
+}
+
+
+.hidden{
+    display: none;
+}
+

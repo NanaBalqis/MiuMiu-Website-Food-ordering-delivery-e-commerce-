@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body
+{
+	min-height: 100vh;
+	background: url('image/abstract\ light.jpg') no-repeat;
+	background-size: cover;
+	font-size: 1.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    padding: 20px 50px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }  
+
+  .brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand .MiuMiu{
+    font-size: 30px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.brand .logo {
+    width: 60px;
+    height: auto;
+}
+
+
+.container{
+	background: white;
+	max-width: 800px;
+	min-height: 500px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 0.5rem 1.5rem;
+	box-shadow: 0 4px 8px pink;
+}
+
+.left{
+	flex-basis: 50%;
+}
+
+.right{
+	flex-basis: 50%;
+}
+
+form{
+	padding: 1rem;
+}
+
+h3{
+	margin-top: 1rem;
+	color: black;
+}
+
+form input[type="text"]{
+	width: 100%;
+	padding: 0.5rem 0.7rem;
+	margin: 0.5rem 0;
+	outline: none;
+	border-radius: 20px;
+}
+
+#zip{
+	display: flex;
+	margin-top: 0.5rem;
+	gap: 10px;
+}
+
+#zip select{
+	padding: 0.5rem 0.7rem;
+	border-radius: 20px;
+}
+
+#zip input[type="number"]{
+	padding: 0.5rem 0.7rem;
+	margin-left: 5px;
+	border-radius: 20px;
+}
+
+input[type="submit"]{
+	width: 100%;
+	padding: 0.7rem 1.5rem;
+	background: #f83992;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	outline: none;
+	margin-top: 1rem;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover{
+	background: #f83992;
+	border: 2px solid black;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+}
+
+.return-button,
+.cart-button {
+	width: 100%;
+    padding: 0.7rem 1.5rem;
+    background-color: #f83992;
+    color: #fff;
+    border: none;
+	border-radius: 20px;
+	outline: none;
+	margin-top: 2rem;
+	cursor: pointer;
+}
+
+.return-button:hover,
+.cart-button:hover {
+    background-color: #d94884;
+	border: 2px solid black;
+}
+
+@media only screen and (max-width: 770px){
+	.container{
+		flex-direction: column;
+	}
+	body{
+		overflow-y: auto;
+	}
+}
