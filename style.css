@@ -1,132 +1,216 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-body{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
+:root {
+    --color-main: #1a202e
 }
 
-body{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: url('abstract\ light.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;	
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.header{
+.sidebar {
+    width: 280px;
     position: fixed;
-    top: 0;
     left: 0;
-    width: 95%;
-    padding: 20px 50px;
-    background: transparent;
+    top: 0;
+    height: 100%;
+    padding: 1rem 1.5rem;
+    background: #FFC0CB;
+    color: #000000;
+}
+
+.sidebar-brand {
+    height: 70px;
+}
+
+.brand-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
-  }  
+}
 
-.brand {
+.sidebar-user {
+    margin: 0rem 0rem 1rem 0rem;
+    text-align: center;
+}
+
+.sidebar-user img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+
+.sidebar-user h3 {
+    font-size: 1rem;
+}
+
+.sidebar-user span {
+    font-size: .8rem;
+}
+
+.sidebar-menu {
+    margin-top: 3rem;
+}
+
+.menu-head {
+    text-transform: uppercase;
+    color: #FF1694;
+    font-size: .75rem;
+    font-weight: 500;
+    margin-bottom: .8rem;
+}
+
+.sidebar-menu ul {
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-menu li {
+    margin-top: .8rem;
+}
+
+.sidebar-menu li a {
+    color: #000000;
+    font-size: .9rem;
     display: flex;
     align-items: center;
 }
 
-.brand .MiuMiu{
-    font-size: 30px;
-    color: #000000;
-    text-decoration: none;
-    font-weight: 700;
+.sidebar-menu li a span {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-right: .8rem;
 }
 
-.brand .logo {
-    width: 60px;
-    height: auto;
+.main-content{
+    margin-left: 280px;
 }
 
-.wrapper{
-    width: 420px;
-    background: white;
-    border: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 0 10px rgba(113, 113, 113, 0.2);
-    color: #000000;
-    border-radius: 10px;
-    padding: 30px 40px;
+.main {
+    padding: 1rem;
+    background: #fff;
+    min-height: calc(100vh - 0px);
 }
 
-.wrapper h1{
-	font-size: 36px;
-	text-align: center;
+header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+
+.profile-dashboard {
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border: 1px solid #FF1694;
+    margin: 20px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.wrapper .input-box{
-	position: relative;
-	width: 83.5%;
-	height: 50px;
-	margin: 30px 0;
+.card-body {
+    padding: 1rem;
 }
 
-.input-box input{
-	width: 100%;
-	height: 10%;
-	background: transparent;
-	border: none;
-	outline: none;
-	border: 2px solid rgba(69, 69, 69, 0.2);
-	border-radius: 40px;
-	font-size: 16px;
-    color: #000000;
-    padding: 20px 45px 20px 20px;
-}
-
-.input-box input::placeholder{
-	color: #000000;
-}
-
-.input-box i{
-	position: absolute;
-	right: -50px;
-	top: 50%;
-	transform: translateY(-50%);
-	font-size: 20px;
-}
-
-.remember-forgot label input{
-    accent-color: #ffffff;
-    margin-right: 3px;
-}
-
-.wrapper .btn{
-    width: 100%;
-    height: 45px;
-    background: rgb(196, 105, 145);
+.custom-button {
+    width: 15%;
+    padding: 0.5rem 1.5rem;
+    background: #f83992;
+    color: white;
     border: none;
     outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
-    font-size: 16px;
-    color:  #000000;
-    font-weight: 600;
 }
 
-.wrapper .register-link{
-    font-size:  14.5px;
+.custom-button:hover {
+    background: #e52e71;
+}
+
+.chart-container {
+    margin-top: 1.5rem;
+    background: #efefef;
+    padding: 8rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border: 1px solid #FF1694;
+    margin: 20px;
+}
+
+.chart-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     text-align: center;
-    margin: 20px 0 15px;
-}
-
-.register-link p a{
-    color: rgb(237, 92, 138);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.register-link p a:hover{
     text-decoration: underline;
+}
 
+.bar-chart {
+    display: flex;
+    height: 400px;
+    align-items: flex-end;
+    position: relative; /* Position relative for absolute positioning of axis lines */
+}
+
+.bar-chart::before,
+.bar-chart::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000; /* Color of the axis lines */
+}
+
+.bar-chart::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    top: 0;
+}
+
+.bar {
+    width: 40px;
+    background-color: #D291BC;
+    margin-right: 18px;
+    transition: height 0.5s ease-out;
+}
+
+.labels {
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.labels label {
+    width: 50px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+input {
+    padding: 15px; 
+}
+
+input::placeholder {
+    color: #777; /* Placeholder text color */
+    font-style: italic; /* Italicize the placeholder text */
+    opacity: 0.7; /* Placeholder text opacity */
+}
+
+/* Add specific styles for each input if needed */
+#name::placeholder,
+#email::placeholder,
+#phone::placeholder,
+#address::placeholder,
+#password::placeholder {
+    color: #777; /* Placeholder text color */
+    font-style: italic; /* Italicize the placeholder text */
+    opacity: 0.7; /* Placeholder text opacity */
 }
