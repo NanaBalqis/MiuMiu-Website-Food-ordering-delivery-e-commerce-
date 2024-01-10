@@ -1,132 +1,409 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
-body{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: url('abstract\ light.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;	
+.header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+  padding: 20px 50px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}  
+.brand 
+{
+  display: flex;
+  align-items: center;
+}
+.brand .logo
+{
+  width: 100px;
+  height: auto;
 }
 
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 95%;
-    padding: 20px 50px;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-  }  
-
-.brand {
-    display: flex;
-    align-items: center;
+#banner
+{
+  background: url(image/cookies.gif) no-repeat;
+  background-size: cover;
+  background-position: center; 
+  height: 100vh; 
 }
 
-.brand .MiuMiu{
-    font-size: 30px;
-    color: #000000;
-    text-decoration: none;
-    font-weight: 700;
+.banner-text .meow {
+  position: absolute;
+  align-items: center;
+  padding-top: -200px;
+  margin-top: -23px;
+  width: 50px;
+  height: 50px;
+  top: 67.5%;
 }
 
-.brand .logo {
-    width: 60px;
-    height: auto;
+.banner-text
+{
+  text-align: center;
+  color: black;
+  padding-top: 180px;
+}
+.banner-text h1
+{
+  font-size: 130px;
+  font-family: 'Abril Fatface', serif;
+}
+.banner-text p
+{
+  font-size: 20px;
+  font-style: italic;
 }
 
-.wrapper{
-    width: 420px;
-    background: white;
-    border: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    color: #000000;
-    border-radius: 10px;
-    padding: 30px 40px;
+.banner-btn {
+  text-align: center;
+  margin: 70px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-btn a
+{
+  width: 150px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 0;
+  color: black;
+  border: 3px solid black;
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  position: relative;
+  z-index: 1; 
+  transition: color 0.5s;
+}
+.banner-btn a i
+{
+  position: relative;
+  size: 50px;
+  top: 3px; 
+}
+.banner-btn a span
+{
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fa99c3;
+  border-radius: 20px;
+  z-index: -1;
+  transition: color 0.5s;
+}
+.banner-btn a:hover span
+{
+  width: 100%;
+ 
+}
+.banner-btn a:hover
+{
+  color: #000;
 }
 
-.wrapper h1{
-	font-size: 36px;
-	text-align: center;
+
+#sideNav
+{
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  right: -250px;
+  top: 0;
+  background: #FCB8D8;
+  z-index: 2;
+  transition: right 0.5s;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+nav ul li
+{
+  list-style: none;
+  margin: 50px 20px;
+}
+nav ul li a
+{
+  text-decoration: none;
+  color: #000;
+}
+  
+nav ul li b{
+  text-decoration: none;
+  color: #000;
+  height: 300px;
+  font-size: larger;
+  font-family: 'Roboto Mono', monospace;
+  margin-right: 10px;
 }
 
-.wrapper .input-box{
-	position: relative;
-	width: 83.5%;
-	height: 50px;
-	margin: 30px 0;
+nav ul li:hover a {
+  background: white;
+  color: #f099c3;
+  padding: 10px 20px; 
+  border-radius: 20px; 
 }
 
-.input-box input{
-	width: 100%;
-	height: 10%;
-	background: transparent;
-	border: none;
-	outline: none;
-	border: 2px solid rgba(69, 69, 69, 0.2);
-	border-radius: 40px;
-	font-size: 16px;
-    color: #000000;
-    padding: 20px 45px 20px 20px;
+nav ul li .icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 8%;
 }
 
-.input-box input::placeholder{
-	color: #000000;
+#menuBtn
+{
+  width: 50px;
+  height: 50px;
+  background: #FCB8D8;
+  text-align: center;
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  border-radius: 3px;
+  z-index: 3;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+#menuBtn i img
+{
+  width: 35px;
+  font-size: 35px;
+  margin-top: 10px;
 }
 
-.input-box i{
-	position: absolute;
-	right: -50px;
-	top: 50%;
-	transform: translateY(-50%);
-	font-size: 20px;
+
+@media screen and (max-width: 770px) 
+{
+  .banner-text h1
+  {
+    font-size: 44px;
+  }
+  .banner-btn a
+  {
+     display: block;
+     margin: 20px auto;
+  }
 }
 
-.remember-forgot label input{
-    accent-color: #fff;
-    margin-right: 3px;
+/*--about--*/
+
+#about
+{
+  width: 100%;
+  padding: 80px 0;
+  background-color: #f099c3;
+  background-size: cover;
+  transition: all;
 }
 
-.wrapper .btn{
-    width: 100%;
-    height: 45px;
-    background: rgb(196, 105, 145);
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    font-size: 16px;
-    color:  #000000;
-    font-weight: 600;
+#about h3{
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  -webkit-text-stroke: 0.0010px;
+  -webkit-text-stroke-color:#f7207d;
+  -webkit-text-fill-color: #000;
 }
 
-.wrapper .register-link{
-    font-size:  14.5px;
-    text-align: center;
-    margin: 20px 0 15px;
+#about p{
+  font-size: 20px;
+  text-indent: 5px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-decoration: none;
+  -webkit-text-stroke: 0px;
+  -webkit-text-stroke-color:#070707;
 }
 
-.register-link p a{
-    color: rgb(237, 92, 138);
-    text-decoration: none;
-    font-weight: 600;
+.title-text
+{
+  text-align: center;
+  padding-bottom: 50px;
 }
 
-.register-link p a:hover{
-    text-decoration: underline;
+.title-text a
+{
+  margin: auto;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
 
+.title-text a::after
+{
+  content: '';
+  width: 50px;
+  height: 35px;
+  background: linear-gradient(#D02A72,#000);
+  position: absolute;
+  top: -10px;
+  left: 0;
+  z-index: -5;
+  transform: rotate(-30deg);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+
+}
+
+.title-text h1
+{
+  font-size: 50px;
+  align-items: center;
+  font-family: 'Pacifico', cursive;
+  
+}
+
+.about-box
+{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+
+.about
+{
+  flex-basis: 50%;
+  text-align: center;
+  align-items: center;
+}
+
+.about-img
+{
+  flex-basis: 50px;
+  margin: auto;
+}
+
+.about-img img 
+{
+  width: 350px;
+  border-radius: 20%;
+  border: 2px solid black;
+}
+
+.about h3
+{
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-family: 'Arvo', serif;
+}
+
+.about-desc
+{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.about-text 
+{
+  padding: 0 10px;
+  text-align: initial;
+  color: #000;
+  font-weight: 100;
+  font-family: 'Play', sans-serif;
+}
+
+
+/*--gallery--*/
+
+#Gallery {
+  width: 100%;
+  padding: 50px 0;
+  background-color: #ffd3e8;
+  background-size: cover;
+  transition: all;
+}
+
+.Gallery-img {
+  display: flex;
+  justify-content: space-between (3px);
+  justify-content: center;
+}
+
+.Gallery-img img {
+  width: 450px;
+  border-radius: 50px;
+  border: 2px solid black;
+  margin: 15px;
+  flex-shrink: 0;
+}
+
+/*--services--*/
+
+#Services
+{
+  width: 100%;
+  padding: 50px 0;
+  background-color: #f099c3;
+  background-size: cover;
+  transition: all;
+}
+
+#Services h3
+{
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  margin-bottom: 25px;
+  left: 0;
+  text-align: center;
+  -webkit-text-stroke: 0.0010px;
+  -webkit-text-stroke-color:#f7207d;
+  -webkit-text-fill-color: #000;
+}
+
+#Services p
+{
+  font-size: 20px;
+  margin: 30px;
+  left: 0;
+  text-align: center;
+  -webkit-text-stroke: 0px;
+  -webkit-text-stroke-color:#070707;
+}
+
+/*--contact--*/
+
+#Contact
+{
+  width: 100%;
+  padding: 80px 0;
+  background-color: #ffd3e8;
+  background-size: cover;
+  transition: all;
+}
+
+#Contact h3
+{
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+  text-align: center;
+  text-indent: 5px;
+  margin: 10px;
+  -webkit-text-stroke: 0.0010px;
+  -webkit-text-stroke-color:#f7207d;
+  -webkit-text-fill-color: #000;
+}
+
+#Contact p
+{
+  font-size: 20px;
 }
