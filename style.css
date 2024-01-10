@@ -12,7 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('abstract\ light.jpg') no-repeat;
+    background: url('newbg.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -56,7 +56,7 @@ body{
     backdrop-filter: blur(5px);
     border-radius: 40px;
     color: #000000;
-    padding: 40px 35px 55px;
+    padding: 35px 35px 35px 35px;
     margin: 0 10px;
 }
 
