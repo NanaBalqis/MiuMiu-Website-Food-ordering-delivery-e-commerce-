@@ -22,5 +22,5 @@ Project Scope:
 • User Registration: Allow customers to register or provide necessary details during the checkout process.
 • Admin Panel: Create an admin interface for updating products and managing sales.
 • Payment Integration: Integrate secure payment gateways for various payment methods.
-• Deployment: Make the website accessible to the public..
+• Deployment: Make the website accessible to the public.
 • Support and Maintenance: Provide ongoing support and maintenance to ensure the website's functionality.
