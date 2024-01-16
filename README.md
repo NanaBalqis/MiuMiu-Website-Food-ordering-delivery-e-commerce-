@@ -5,7 +5,7 @@ Wan Fatihah (Back-end)
 Madihah (Front-end and Back-end)
 Siti Nuralia (Front-end)
 Nur Hanis (Front-end)
-Siti Nuraina (Front-end)
+Siti Nuraina (Front-end).
 
 we aims to develop a website with an aesthetic style to sell a variety dessert and drinks which we choose to did this project MiuMiu website. The website also facilitate food delivery to customers' preferred locations, make an order creating new items to menu with payment options including variety of method to pay, track expense and sales, create a wishlist and build a user friendl & responsive website.
 
